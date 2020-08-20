@@ -1,7 +1,7 @@
 {
     "name": "thanieljay/ipay88",
     "description": "Ipay88 payment gateway for laravel",
-    "keywords": ["ipay", "Philippines", "api","ipay88", ],
+    "keywords": ["ipay", "Philippines", "api", "ipay88"],
     "homepage": "https://github.com/thanieljay/ipay88",
     "license": "MIT",
     "autoload": {
