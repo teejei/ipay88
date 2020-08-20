@@ -5,7 +5,7 @@ namespace IPay88\Security;
 class Response
 {
 	private $merchantKey;
-	public static $validReferrer = "www.mobile88.com";
+	public static $validReferrer = "payment.ipay88.com.ph";
 
     public function __construct($merchantKey)
     {
