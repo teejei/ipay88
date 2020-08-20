@@ -13,7 +13,7 @@
         {
             "name": "Thaniel Jay",
             "email": "tjay.developer@gmail.com"
-        },
+        }
     ],
     "minimum-stability": "stable",
     "require-dev": {
