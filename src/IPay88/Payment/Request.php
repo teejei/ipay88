@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace IPay88\Payment;
 
@@ -7,7 +7,7 @@ use IPay88\View\RequestForm;
 
 class Request
 {
-    public static $paymentUrl = 'https://www.mobile88.com/epayment/entry.asp';
+    public static $paymentUrl = 'https://payment.ipay88.com.my/epayment/entry.asp';
 
 	private $merchantKey;
 
@@ -188,7 +188,7 @@ class Request
 	*  Override `$fillable_fields` to determine what value can be set during this factory method
 	* @example
 	*  $request = IPay88\Payment\Request::make($merchantKey, $fieldValues)
-	* 
+	*
 	*/
 	public static function make($merchantKey, $fieldValues)
 	{
@@ -233,5 +233,5 @@ class Request
         return $multiCurrency ? $nonMyr : $myrOnly;
     }
 
-    
+
 }
