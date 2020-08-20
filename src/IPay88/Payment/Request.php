@@ -7,7 +7,7 @@ use IPay88\View\RequestForm;
 
 class Request
 {
-    public static $paymentUrl = 'https://payment.ipay88.com.my/epayment/entry.asp';
+    public static $paymentUrl =  env('IPAY88_POSTING_URL', 'https://payment.ipay88.com.ph/epayment/entry.asp');
 
 	private $merchantKey;
 
@@ -203,19 +203,19 @@ class Request
     public static function getPaymentOptions($multiCurrency = true)
     {
         $myrOnly = array(
-        	2 => array('Credit Card','MYR'),
-        	6 => array('Maybank2U','MYR'),
-        	8 => array('Alliance Online','MYR'),
-        	10=> array('AmOnline','MYR'),
-        	14=> array('RHB Online','MYR'),
-        	15=> array('Hong Leong Online','MYR'),
-        	16=> array('FPX','MYR'),
-        	20=> array('CIMB Click', 'MYR'),
-        	22=> array('Web Cash','MYR'),
-        	48=> array('PayPal','MYR'),
-        	100 => array('Celcom AirCash','MYR'),
-        	102 => array('Bank Rakyat Internet Banking','MYR'),
-        	103 => array('AffinOnline','MYR')
+        	2 => array('Credit Card','PHP'),
+        	6 => array('Maybank2U','PHP'),
+        	8 => array('Alliance Online','PHP'),
+        	10=> array('AmOnline','PHP'),
+        	14=> array('RHB Online','PHP'),
+        	15=> array('Hong Leong Online','PHP'),
+        	16=> array('FPX','PHP'),
+        	20=> array('CIMB Click', 'PHP'),
+        	22=> array('Web Cash','PHP'),
+        	48=> array('PayPal','PHP'),
+        	100 => array('Celcom AirCash','PHP'),
+        	102 => array('Bank Rakyat Internet Banking','PHP'),
+        	103 => array('AffinOnline','PHP')
         );
 
         $nonMyr = array(
