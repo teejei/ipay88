@@ -7,7 +7,7 @@ use IPay88\View\RequestForm;
 
 class Request
 {
-    public static $paymentUrl =  env('IPAY88_POSTING_URL', 'https://payment.ipay88.com.ph/epayment/entry.asp');
+    public static $paymentUrl =  'https://payment.ipay88.com.ph/epayment/entry.asp';
 
 	private $merchantKey;
 
@@ -193,7 +193,7 @@ class Request
 	public static function make($merchantKey, $fieldValues)
 	{
 		$request = new Request($merchantKey);
-		RequestForm::render($fieldValues, self::$paymentUrl);
+		RequestForm::render($fieldValues, env('IPAY88_POSTING_URL', self::$paymentUrl));
 	}
 
     /**
