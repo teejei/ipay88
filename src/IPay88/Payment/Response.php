@@ -6,7 +6,7 @@ use IPay88\Security\Signature;
 
 class Response
 {
-	public static $requeryUrl = env('IPAY88_Re-Query_URL', 'https://payment.ipay88.com.ph/epayment/enquiry.asp');
+	public static $requeryUrl = 'https://payment.ipay88.com.ph/epayment/enquiry.asp';
 	
 
 	private $return;
@@ -61,7 +61,7 @@ class Response
 			trigger_error('PHP cURL extension is required.');
 			return FALSE;
 		}
-		$curl = curl_init(self::$requeryUrl . '?' . http_build_query($payment_details));
+		$curl = curl_init(env('IPAY88_Re-Query_URL',self::$requeryUrl) . '?' . http_build_query($payment_details));
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 		$result = trim(curl_exec($curl));
 		//$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
